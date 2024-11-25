@@ -1,0 +1,72 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position -0.22892962336920558 -6.473284103236478e-07 2.482877106083638
+  follow "EPuckGreen"
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorTileSize 0.25 0.25
+  wallHeight 0.2
+}
+WoodenBox {
+  translation 0.291339 -0.299124 0.05
+  size 0.1 0.1 0.2
+}
+WoodenBox {
+  translation -0.112053 0.23025 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.2
+}
+WoodenBox {
+  translation -0.201975 -0.256331 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.2
+}
+E-puck {
+  name "EPuckGreen"
+  controller "EPuckPlusGreenController"
+  receiver_channel 2
+  turretSlot [
+    GPS {
+    }
+    Compass {
+    }
+    Lidar {
+      translation 0.0095 0 0.0514
+      numberOfLayers 1
+      defaultFrequency 25
+    }
+    Display {
+      name "display1"
+      width 256
+      height 256
+    }
+    Display {
+      name "display2"
+      width 256
+      height 256
+    }
+  ]
+}
+E-puck {
+  translation 0.16 0 0
+  rotation 0 0 1 1.5708
+  name "EPuckBlack"
+  controller "EPuckBlackController"
+  version "2"
+  emitter_channel 2
+}
